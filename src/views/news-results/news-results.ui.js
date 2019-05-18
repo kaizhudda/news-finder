@@ -16,6 +16,6 @@ const NewsResults = ({ loadTest, test }) => {
 
     </div>
   );
-}
+};
 
 export default NewsResults; 

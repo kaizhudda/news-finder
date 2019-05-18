@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'http://hn.algolia.com/api/v1/search?'
+  baseURL: 'https://cors-anywhere.herokuapp.com/https://hn.algolia.com/api/v1/'
 });
