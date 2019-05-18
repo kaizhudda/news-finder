@@ -8,9 +8,12 @@ const NewsResults = ({ loadTest, test }) => {
     loadTest();
   })
   return (
-    <div>
-      <h2>News Results</h2>
-      <p>{test}</p>
+    <div className="row center-lg center-md">
+      <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <h2>News Results</h2>
+        <p>{test}</p>
+      </div>
+
     </div>
   );
 }
