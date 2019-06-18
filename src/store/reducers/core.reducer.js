@@ -2,10 +2,7 @@ import { combineReducers } from 'redux';
 import { LOAD_TEST } from '../actions/types';
 
 const INITAL_STATE = {
-  hits: [{
-    title: ''
-  }]
-
+  hits: []
 };
 
 export const test = (state = INITAL_STATE, action) => {

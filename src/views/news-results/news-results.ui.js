@@ -4,7 +4,6 @@ import './news-results.scss';
 
 const NewsResults = ({ loadTest, test, hits }) => {
   useEffect(() => {
-    // Load test action
     loadTest();
   }, [loadTest])
 
