@@ -6,3 +6,8 @@ export const selectTest = createSelector(
   [getTest],
   test => test.nbPages
 );
+
+export const selectHits = createSelector(
+  [getTest],
+  test => test.hits
+);
