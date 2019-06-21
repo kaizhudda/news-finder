@@ -2,16 +2,14 @@ import React, { useEffect } from 'react';
 import moment from 'moment';
 import './news-results.scss';
 
-const NewsResults = ({ loadTest, test, hits }) => {
+const NewsResults = ({ loadTest, hits }) => {
   useEffect(() => {
     loadTest();
-  }, [loadTest])
+  }, [])
 
   return (
     <div className="News-Results row center-lg center-md">
       <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-        <h2>News Results</h2>
-        <p>{test}</p>
         {
           hits.map((hit, index) => (
             <div key={index} className="hit-item">

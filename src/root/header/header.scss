@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+
+.Header {
+  font-family: $font-heading;
+
+  .header-content {
+    background: #ff742b;
+    color: white;
+
+    h1 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      font-family: $font-heading;
+      padding: 7.5px 15px;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+
+}
