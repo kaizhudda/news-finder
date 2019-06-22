@@ -6,8 +6,7 @@ const SearchBar = () => {
   return (
     <form class="search-container">
       <input type="text" id="search-bar" placeholder="Search stories by title" />
-      <i class="fas fa-search" />
-      {/* <a href="#"><i class="search-icon fas fa-search"/></a> */}
+      {/* <i class="fas fa-search" /> */}
     </form>
   )
 };
