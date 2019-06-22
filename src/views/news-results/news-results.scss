@@ -12,7 +12,19 @@
     position: relative;
     line-height: 20px;
 
-    h3 {
+    .score {
+      color: #f60;
+      font-size: 1.1em;
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 80px;
+      text-align: center;
+      margin-top: -10px;
+    }
+    .title {
+      display: flex;
       margin: 0 0 5px 0;
       font-family: $font-heading;
       text-align: left;
@@ -45,7 +57,7 @@ body.light-mode {
       border-bottom: 1px solid #eeeeee;
       transition: background-color 0.3s ease;
 
-      h3 {
+      .title {
         color: #34495e;
       }
 
@@ -64,7 +76,7 @@ body.dark-mode {
       transition: background-color 0.3s ease;
       transition: border-bottom 0.3s ease;
 
-      h3 {
+      .title {
         color: #dfdfdf;
       }
 

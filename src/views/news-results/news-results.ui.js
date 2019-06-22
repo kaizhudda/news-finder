@@ -13,7 +13,8 @@ const NewsResults = ({ loadTest, hits }) => {
         {
           hits.map((hit, index) => (
             <div key={index} className="hit-item">
-              <h3>{hit.title}</h3>
+              <span className="score">523</span>
+              <span className="title">{hit.title}</span>
               <div className="support-hit">
                 <p>{hit.points} points</p>
                 <p>{hit.author}</p>
