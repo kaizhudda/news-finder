@@ -8,7 +8,15 @@ body {
 }
 
 .App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 
+  .wrap {
+    
+  }
 }
 
 body.dark-mode {
