@@ -7,7 +7,7 @@ import './header.scss';
 const Header = () => {
   return (
     <div className="Header row">
-      <div className="col-xs-12">
+      <div className="col-xs-12 col-lg-8 col-lg-offset-2">
         <div className="header-content">
           <h1>hacker news</h1>
           <SearchBar />

@@ -49,8 +49,9 @@
 
 body.light-mode {
   .Header {
+    background: #ff6600;
+
     .header-content {
-      background: #ff6600;
       color: white;
       transition: background-color 0.3s ease;
     }
@@ -59,8 +60,9 @@ body.light-mode {
 
 body.dark-mode {
   .Header {
+    background-color: #393c3e;
+
     .header-content {
-      background-color: #393c3e;
       color: #dfdfdf;
       transition: background-color 0.3s ease;
     }
