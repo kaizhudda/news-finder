@@ -1,13 +1,13 @@
 import { createSelector } from 'reselect';
 
-const getTest = (state) => state.test;
+const getNews = (state) => state.news;
 
-export const selectTest = createSelector(
-  [getTest],
-  test => test.nbPages
+export const selectNewsData = createSelector(
+  [getNews],
+  news => news.nbPages
 );
 
 export const selectHits = createSelector(
-  [getTest],
-  test => test.hits
+  [getNews],
+  news => news.hits
 );

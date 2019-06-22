@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
-import { LOAD_TEST } from '../actions/types';
+import { FETCH_NEWS_DATA } from '../actions/types';
 
 const INITAL_STATE = {
   hits: []
 };
 
-export const test = (state = INITAL_STATE, action) => {
+export const news = (state = INITAL_STATE, action) => {
   switch (action.type) {
-    case LOAD_TEST:
+    case FETCH_NEWS_DATA:
       return action.payload;
     default: 
       return state;
@@ -15,5 +15,5 @@ export const test = (state = INITAL_STATE, action) => {
 };
 
 export default combineReducers({
-  test
+  news
 });

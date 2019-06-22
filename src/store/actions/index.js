@@ -1,11 +1,11 @@
-import { LOAD_TEST } from './types';
+import { FETCH_NEWS_DATA } from './types';
 import newsSearchAPI from '../../apis/news-search';
 
-export const loadTest = () => async dispatch => {
+export const fetchNewsData = () => async dispatch => {
   const response = await newsSearchAPI.get('search?query=bill&tags=story');
   console.log(response);
   dispatch({
-    type: LOAD_TEST,
+    type: FETCH_NEWS_DATA,
     payload: response.data
   });
 };

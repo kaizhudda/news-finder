@@ -1,1 +1,1 @@
-export const LOAD_TEST = 'LOAD_TEST';
+export const FETCH_NEWS_DATA = 'FETCH_NEWS_DATA';

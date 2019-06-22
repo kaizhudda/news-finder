@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import moment from 'moment';
 import './news-results.scss';
 
-const NewsResults = ({ loadTest, hits }) => {
+const NewsResults = ({ fetchNewsData, hits }) => {
   useEffect(() => {
-    loadTest();
-  }, [])
+    fetchNewsData();
+  }, [fetchNewsData])
 
   return (
     <div className="News-Results row center-lg center-md">

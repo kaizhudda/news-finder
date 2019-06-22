@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
-import { loadTest } from '../../store/actions';
-import { selectTest, selectHits } from '../../store/selectors';
+import { fetchNewsData } from '../../store/actions';
+import { selectHits } from '../../store/selectors';
 import NewsResults from './news-results.ui';
 
 const mapStateToProps = state => ({
-  test: selectTest(state),
   hits: selectHits(state),
 });
 
-export default connect(mapStateToProps, { loadTest })(NewsResults);
+export default connect(mapStateToProps, { fetchNewsData })(NewsResults);
