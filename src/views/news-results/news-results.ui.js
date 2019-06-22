@@ -13,11 +13,10 @@ const NewsResults = ({ loadTest, hits }) => {
         {
           hits.map((hit, index) => (
             <div key={index} className="hit-item">
-              <span className="score">523</span>
+              <span className="score">{hit.points}</span>
               <span className="title">{hit.title}</span>
               <div className="support-hit">
-                <p>{hit.points} points</p>
-                <p>{hit.author}</p>
+                <p>by {hit.author}</p>
                 <p>
                     {moment(hit.created_at).fromNow()}
                 </p>
