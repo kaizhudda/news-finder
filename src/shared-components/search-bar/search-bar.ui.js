@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './search-bar.scss';
 
-const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const onSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  }
+const SearchBar = ({ onChange, value }) => {
 
   return (
     <form className="search-container">
       <input 
-        value={searchTerm}
-        onChange={onSearchChange}
+        value={value}
+        onChange={onChange}
         type="text" 
         id="search-bar" 
         placeholder="Search stories by title" />
