@@ -9,7 +9,7 @@ const Header = () => {
     <div className="Header row">
       <div className="col-xs-12">
         <div className="header-content">
-          <h1>Hacker News</h1>
+          <h1>hacker news</h1>
           <SearchBar />
           <DarkModeToggle />
         </div>

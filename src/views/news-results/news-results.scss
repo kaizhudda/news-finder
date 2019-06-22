@@ -59,9 +59,10 @@ body.light-mode {
 body.dark-mode {
   .News-Results {
     .hit-item {
-      background: #10171d;
-      border-bottom: 1px solid #1b2938;
+      background: #393c3e;
+      border-bottom: 1px solid #272727;
       transition: background-color 0.3s ease;
+      transition: border-bottom 0.3s ease;
 
       h3 {
         color: #dfdfdf;

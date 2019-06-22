@@ -28,9 +28,10 @@
       margin-top: 0px;
       font-family: $font-heading;
       font-size: 1.125rem;
-      font-weight: 500;
+      font-weight: 400;
       flex-grow: 1;
       text-align: left;
+      letter-spacing: 0.075rem;
 
       @include phone-only {
         font-size: 1rem;
@@ -59,7 +60,7 @@ body.light-mode {
 body.dark-mode {
   .Header {
     .header-content {
-      background-color: #1b2938;
+      background-color: #393c3e;
       color: #dfdfdf;
       transition: background-color 0.3s ease;
     }
