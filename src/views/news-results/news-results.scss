@@ -13,7 +13,6 @@
     line-height: 20px;
 
     .score {
-      color: #f60;
       font-size: 1.1em;
       font-weight: 700;
       position: absolute;
@@ -38,7 +37,8 @@
 
     .support-hit {
       display: flex;
-      p {
+      flex-wrap: wrap;
+      span {
         margin: 0 10px 0 0;
         font-size: 0.85rem;
 
@@ -57,12 +57,18 @@ body.light-mode {
       border-bottom: 1px solid #eeeeee;
       transition: background-color 0.3s ease;
 
+      .score {
+        color: #f60;
+      }
+
       .title {
         color: #34495e;
       }
 
-      p {
-        color: #828282;
+      .support-hit {
+        span {
+          color: #828282;
+        }
       }
     }
   }
@@ -75,14 +81,21 @@ body.dark-mode {
       border-bottom: 1px solid #272727;
       transition: background-color 0.3s ease;
       transition: border-bottom 0.3s ease;
+      
+      .score {
+        color: lightblue;
+      }
 
       .title {
         color: #dfdfdf;
       }
 
-      p {
-        color: #dfdfdf;
+      .support-hit {
+        span {
+          color: #dfdfdf;
+        }
       }
+
     }
   }
 }

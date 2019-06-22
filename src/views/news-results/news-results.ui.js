@@ -16,11 +16,11 @@ const NewsResults = ({ loadTest, hits }) => {
               <span className="score">{hit.points}</span>
               <span className="title">{hit.title}</span>
               <div className="support-hit">
-                <p>by {hit.author}</p>
-                <p>
+                <span>by {hit.author}</span>
+                <span>
                     {moment(hit.created_at).fromNow()}
-                </p>
-                <p>{hit.num_comments} comments</p>
+                </span>
+                <span>{hit.num_comments} comments</span>
               </div>
             </div>
           ))
