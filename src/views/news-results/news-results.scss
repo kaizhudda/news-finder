@@ -3,6 +3,10 @@
 .News-Results {
   font-family: $font-heading;
 
+  .shadow {
+    box-shadow: $primary-border-shadow;
+    padding: 0;
+  }
 
   .hit-item {
     padding: 1px;
