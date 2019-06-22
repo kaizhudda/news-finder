@@ -4,19 +4,16 @@
 body {
   margin-top: 0;
   margin-bottom: 0;
-  background: #efefef;
+  background: #f2f3f5;
+  box-sizing: border-box;
 }
 
 .App {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  max-width: 1200px;
   margin: 0 auto;
-
-  .wrap {
-    
-  }
+  box-sizing: border-box;
 }
 
 body.dark-mode {

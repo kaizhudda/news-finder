@@ -9,7 +9,7 @@ const NewsResults = ({ loadTest, hits }) => {
 
   return (
     <div className="News-Results row center-lg center-md">
-      <div className="col-xs-12 col-sm-12 col-md-8 col-lg-7 shadow">
+      <div className="col-xs-12 col-sm-12 col-md-8 col-lg-7">
         {
           hits.map((hit, index) => (
             <div key={index} className="hit-item">
