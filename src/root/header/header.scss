@@ -9,8 +9,15 @@
   }
 
   .header-content {
+    display: flex;
+    flex-direction: row;
     background: #ff742b;
     color: white;
+    // justify-content: center;
+
+    :last-child {
+      margin-left: auto;
+    }
 
     h1 {
       margin-bottom: 0px;

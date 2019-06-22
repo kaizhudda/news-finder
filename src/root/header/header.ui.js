@@ -1,4 +1,5 @@
 import React from 'react';
+import Toggle from '../../shared-components/toggle';
 import './header.scss';
 
 const Header = () => {
@@ -7,6 +8,7 @@ const Header = () => {
       <div className="col-xs-12 col-sm-12 col-md-8 col-lg-7 shadow">
         <div className="header-content">
           <h1>Hacker News</h1>
+          <Toggle />
         </div>
       </div>
     </div>
