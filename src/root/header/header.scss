@@ -12,23 +12,32 @@
   .header-content {
     display: flex;
     flex-direction: row;
-    // justify-content: center;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 
-    :last-child {
-      margin-left: auto;
-    }
+    // :last-child {
+    //   margin-left: auto;
+    // }
 
     h1 {
       margin-bottom: 0px;
       margin-top: 0px;
       font-family: $font-heading;
-      padding: 7.5px 15px;
       font-size: 1.125rem;
       font-weight: 500;
+      flex-grow: 1;
+      text-align: left;
 
       @include phone-only {
         font-size: 1rem;
       }
+    }
+
+    .dark-mode-toggle {
+      flex-grow: 1;
     }
   }
 
