@@ -61,3 +61,12 @@
     }
   }
 }
+
+body.dark-mode {
+  .dark-mode-toggle > button {
+    color: #999;
+    &:last-child {
+      color: lightblue;
+    }
+  }
+}

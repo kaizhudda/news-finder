@@ -1,3 +1,33 @@
-.App {
+@import '../styles/variables';
+@import '../styles/media-queries';
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
   background: #efefef;
+}
+
+.App {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include phone-only {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include phablet-only {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  
+  @include tablet-only {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+body.dark-mode {
+  background: #292929;
 }

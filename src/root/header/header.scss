@@ -11,8 +11,6 @@
   .header-content {
     display: flex;
     flex-direction: row;
-    background: #ff742b;
-    color: white;
     // justify-content: center;
 
     :last-child {
@@ -29,4 +27,24 @@
     }
   }
 
+}
+
+body.light-mode {
+  .Header {
+    .header-content {
+      background: #ff742b;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+  }
+}
+
+body.dark-mode {
+  .Header {
+    .header-content {
+      background-color: #1b2938;
+      color: #dfdfdf;
+      transition: background-color 0.3s ease;
+    }
+  }
 }
