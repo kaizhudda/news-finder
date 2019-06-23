@@ -8,11 +8,11 @@ import './header.scss';
 const Header = ({ fetchNewsData }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const onSearchChange = (e) => {
-    console.log(e.target.value);
-    setSearchTerm(e.target.value);
-    // _.debounce((fetchNewsData(e.target.value), 2000));
-    fetchNewsData(e.target.value)
+  const onSearchChange = (value) => {
+    console.log(value);
+    setSearchTerm(value);
+    // _.debounce((fetchNewsData(value), 2000));
+    fetchNewsData(value)
   }
 
   return (
@@ -20,7 +20,7 @@ const Header = ({ fetchNewsData }) => {
       <div className="col-xs-12 col-lg-8 col-lg-offset-2">
         <div className="header-content">
           <h1>hacker news</h1>
-          <SearchBar onChange={onSearchChange} value={searchTerm} />
+          <SearchBar onChange={e => onSearchChange(e.target.value)} value={searchTerm} />
           <DarkModeToggle />
         </div>
       </div>
