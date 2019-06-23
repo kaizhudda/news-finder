@@ -34,7 +34,7 @@ input#search-bar{
   border: 1px solid #D0CFCE;
   outline: none;
   &:focus{
-    border: 1px solid #008ABF;
+    border: 1px solid transparent;
     transition: 0.35s ease;
     color: #333333;
     &::-webkit-input-placeholder{
@@ -75,3 +75,30 @@ input#search-bar{
 //   top: -30px;
 //   left: 150px;
 // }
+
+body.light-mode {
+  .fa-search {
+    color: #ff742b;
+  }
+
+  input#search-bar {
+    border: 1px solid #D0CFCE;
+  }
+}
+
+body.dark-mode {
+  .fa-search {
+    color: #999;
+  }
+
+  input#search-bar {
+    background: #272727;
+    border: 1px solid #393c3e;
+    color: #dfdfdf;
+
+    &::placeholder {
+      color: #dfdfdf;
+    }
+  }
+
+}
