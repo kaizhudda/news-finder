@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import _ from 'lodash';
 import DarkModeToggle from '../../shared-components/toggle';
 import SearchBar from '../../shared-components/search-bar';
 
@@ -10,7 +11,8 @@ const Header = ({ fetchNewsData }) => {
   const onSearchChange = (e) => {
     console.log(e.target.value);
     setSearchTerm(e.target.value);
-    fetchNewsData(e.target.value);
+    // _.debounce((fetchNewsData(e.target.value), 2000));
+    fetchNewsData(e.target.value)
   }
 
   return (
