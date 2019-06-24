@@ -5,7 +5,7 @@ import './news-results.scss';
 const NewsResults = ({ fetchNewsData, hits, filters  }) => {
   useEffect(() => {
     fetchNewsData();
-  }, [filters])
+  }, [fetchNewsData, filters]);
 
   return (
     <div className="News-Results row center-lg center-md">
