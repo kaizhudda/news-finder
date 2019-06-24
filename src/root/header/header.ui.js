@@ -4,7 +4,7 @@ import SearchBar from '../../shared-components/search-bar';
 
 import './header.scss';
 
-const Header = ({ fetchNewsData, setQuery }) => {
+const Header = ({ setQuery }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const onSearchChange = (e) => {
