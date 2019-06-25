@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchNewsData } from '../../store/actions';
+import { fetchNewsData } from '../../store/actions/news-actions';
 import { selectHits, selectFilters } from '../../store/selectors';
 import NewsResults from './news-results.ui';
 
