@@ -40,6 +40,24 @@
       }
     }
 
+    .comment {
+      display: flex;
+      margin: 0 0 5px 0;
+      font-family: $font-heading;
+      text-align: left;
+      font-weight: 400;
+      font-size: 0.875rem;
+      color: #34495e;
+      margin-top: 10px;
+      background: #f2f3f5;
+      padding: 20px 25px;
+      border: 1px solid lightgrey;
+
+      @include phone-only {
+        font-size: 0.825rem;
+      }
+    }
+
     .support-hit {
       display: flex;
       flex-wrap: wrap;
@@ -52,6 +70,10 @@
         }
       }
     }
+  }
+
+  .less-side-padding {
+    padding: 20px 30px;
   }
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import moment from 'moment';
+import ReactMarkdown from 'react-markdown';
 import './news-results.scss';
 
 const NewsResults = ({ fetchNewsData, hits, filters }) => {
@@ -12,11 +13,10 @@ const NewsResults = ({ fetchNewsData, hits, filters }) => {
       <div className="col-xs-12 col-sm-12 col-md-8 col-lg-7">
         {
           hits.map((hit, index) => (
-            <div key={index} className="hit-item">
+            <div key={index} className={`hit-item ${filters.tags === 'comment' ? 'less-side-padding' : ''}`}>
               {
                 filters.tags === 'comment' ?
                   <>
-                    <span className="score">{hit.points}</span>
                     <span className="title">{hit.story_title}</span>
                     <div className="support-hit">
                       <span>by {hit.author}</span>
@@ -24,7 +24,12 @@ const NewsResults = ({ fetchNewsData, hits, filters }) => {
                         {moment(hit.created_at).fromNow()}
                       </span>
                     </div>
-                    <span className="title">{hit.comment_text}</span>
+                    {/* <span className="title">{hit.comment_text}</span> */}
+                    <span className="comment">
+                      <ReactMarkdown
+                        source={hit.comment_text}
+                        escapeHtml={false}/>
+                    </span>
                   </>
                   :
                   <>
