@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './subheader.scss';
 
-const SubHeader = ({ setQuery }) => {
+const SubHeader = ({}) => {
 
   return (
     <div className="SubHeader row">

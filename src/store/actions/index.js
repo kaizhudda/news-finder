@@ -1,4 +1,4 @@
-import { FETCH_NEWS_DATA, SET_QUERY } from './types';
+import { FETCH_NEWS_DATA } from './types';
 import newsSearchAPI from '../../apis/news-search';
 import { selectFilters } from '../selectors/index';
 
@@ -16,10 +16,3 @@ export const fetchNewsData = () => async (dispatch, getState) => {
     payload: response.data
   });
 };
-
-export const setQuery = query => dispatch => {
-  dispatch({
-    type: SET_QUERY,
-    payload: query
-  });
-}
