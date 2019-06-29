@@ -14,9 +14,18 @@ const relevanceOptions = [
   { value: 'search_by_date', label: 'Date' }
 ];
 
-const SubHeader = ({ setTag, setRelevance }) => {
+const timeOptions = [
+  { value: 'all_time', label: 'All time' },
+  { value: 'last_24h', label: 'Last 24h' },
+  { value: 'past_week', label: 'Past week' },
+  { value: 'past_month', label: 'Past Month' },
+  { value: 'past_year', label: 'Past Year' }
+];
+
+const SubHeader = ({ setTag, setRelevance, setTimeRange }) => {
   const defaultOption = options[0];
   const defaultRevelvanceOptions = relevanceOptions[0];
+  const defaultTimeOptions = timeOptions[0];
 
   const onTagsChange = ({ value }) => {
     console.log('selected dropdown value', value);
@@ -25,6 +34,11 @@ const SubHeader = ({ setTag, setRelevance }) => {
 
   const onRelevanceChange = ({ value }) => {
     console.log('relevant option:', value);
+    setRelevance(value);
+  }
+
+  const onTimeRangeChange = ({ value }) => {
+    console.log('onTimeRangeChange option:', value);
     setRelevance(value);
   }
 
@@ -40,12 +54,20 @@ const SubHeader = ({ setTag, setRelevance }) => {
             value={defaultOption}
             placeholder="Select an option" />
 
-          <span className="by-relevance">By</span>
+          <span className="by-relevance">by</span>
           <Dropdown
             className="tags-dropdown"
             onChange={onRelevanceChange}
             options={relevanceOptions}
             value={defaultRevelvanceOptions}
+            placeholder="Select an option" />
+
+          <span className="by-relevance">for</span>
+          <Dropdown
+            className="tags-dropdown"
+            onChange={onTimeRangeChange}
+            options={timeOptions}
+            value={defaultTimeOptions}
             placeholder="Select an option" />
         </div>
       </div>

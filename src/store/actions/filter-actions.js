@@ -1,4 +1,4 @@
-import { SET_QUERY, SET_TAG, SET_RELEVANCE } from './types';
+import { SET_QUERY, SET_TAG, SET_RELEVANCE, SET_TIME_RANGE } from './types';
 
 export const setQuery = query => dispatch => {
   dispatch({
@@ -22,6 +22,15 @@ export const setRelevance = relevance => dispatch => {
   dispatch({
     type: SET_RELEVANCE,
     payload: relevance
+  });
+};
+
+export const setTimeRange = time => dispatch => {
+  console.log('SET_TIME_RANGE', time);
+
+  dispatch({
+    type: SET_TIME_RANGE,
+    payload: time
   });
 };
 
