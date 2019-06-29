@@ -5,7 +5,6 @@ import 'react-dropdown/style.css';
 import './subheader.scss';
 
 const options = [
-  { value: 'all', label: 'All' },
   { value: 'story', label: 'Stories', className: 'myOptionClassName' },
   { value: 'comment', label: 'Comments' }
 ];
