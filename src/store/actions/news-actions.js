@@ -8,7 +8,7 @@ export const fetchNewsData = () => async (dispatch, getState) => {
   const state = getState();
   const filters = selectFilters(state);
   console.log(filters);
-  const created_at = moment().subtract(1, 'days').unix();
+  const created_at = moment().subtract(1, 'days').unix(); // last 24 hours
   const response = await newsSearchAPI.get(`${filters.relevance}?query=${filters.query}&tags=${filters.tags}&numericFilters=created_at_i>${created_at}`);
   console.log(response);
   dispatch({

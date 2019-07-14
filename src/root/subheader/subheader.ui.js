@@ -39,7 +39,7 @@ const SubHeader = ({ setTag, setRelevance, setTimeRange }) => {
 
   const onTimeRangeChange = ({ value }) => {
     console.log('onTimeRangeChange option:', value);
-    setRelevance(value);
+    setTimeRange(value);
   }
 
   return (
