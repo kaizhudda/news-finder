@@ -13,8 +13,8 @@
     display: flex;
     flex-direction: row;
     // height: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     align-items: center;
     // justify-content: space-between;
     padding-left: 20px;
@@ -54,7 +54,7 @@
 
 body.light-mode {
   .Header {
-    background: #ff6600;
+    background: #ff742b;
 
     .header-content {
       color: white;

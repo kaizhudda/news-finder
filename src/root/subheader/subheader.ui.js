@@ -18,8 +18,8 @@ const timeOptions = [
   { value: 'all_time', label: 'All time' },
   { value: 'last_24h', label: 'Last 24h' },
   { value: 'past_week', label: 'Past week' },
-  { value: 'past_month', label: 'Past Month' },
-  { value: 'past_year', label: 'Past Year' }
+  { value: 'past_month', label: 'Past month' },
+  { value: 'past_year', label: 'Past year' }
 ];
 
 const SubHeader = ({ setTag, setRelevance, setTimeRange }) => {
@@ -46,7 +46,7 @@ const SubHeader = ({ setTag, setRelevance, setTimeRange }) => {
     <div className="SubHeader row">
       <div className="col-xs-12 col-lg-8 col-lg-offset-2">
         <div className="subheader-content">
-          <span className="search">Search</span>
+          <span className="search hide-content">Search</span>
           <Dropdown
             className="tags-dropdown"
             onChange={onTagsChange}
@@ -54,7 +54,7 @@ const SubHeader = ({ setTag, setRelevance, setTimeRange }) => {
             value={defaultOption}
             placeholder="Select an option" />
 
-          <span className="by-relevance">by</span>
+          <span className="by-relevance hide-content">by</span>
           <Dropdown
             className="tags-dropdown"
             onChange={onRelevanceChange}
@@ -62,7 +62,7 @@ const SubHeader = ({ setTag, setRelevance, setTimeRange }) => {
             value={defaultRevelvanceOptions}
             placeholder="Select an option" />
 
-          <span className="by-relevance">for</span>
+          <span className="by-relevance hide-content">for</span>
           <Dropdown
             className="tags-dropdown"
             onChange={onTimeRangeChange}

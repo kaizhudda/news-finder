@@ -19,7 +19,7 @@ const Header = ({ setQuery }) => {
     <div className="Header row">
       <div className="col-xs-12 col-lg-8 col-lg-offset-2">
         <div className="header-content">
-          <h1>hacker news</h1>
+          <h1>HN.</h1>
           <SearchBar onChange={onSearchChange} value={searchTerm} />
           <DarkModeToggle />
         </div>

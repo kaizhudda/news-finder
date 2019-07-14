@@ -5,20 +5,31 @@
   font-family: $font-heading;
   position: fixed;
   z-index: 999;
-  top: 60px;
+  top: 50px;
   left: 0;
   right: 0;
-  padding: 15px 30px;
+  padding: 10px 30px;
 
   box-shadow:  1px 2px rgba(0,0,0,.1);
 
   @include phone-only {
-    top: 129px;
+    top: 121px;
+    padding: 10px;
+  }
+
+  .hide-content {
+    @include phone-only {
+      display: none;
+    }
   }
 
   .subheader-content {
     display: flex;
     flex-direction: row;
+
+    @include phone-only {
+      justify-content: center;
+    }
 
     .search {
       color: #34495e;
@@ -31,9 +42,18 @@
     .tags-dropdown {
       font-size: 13px;
       width: 105px;
+
+      @include phone-only {
+        margin-right: 5px;
+      }
+
       .Dropdown-control {
-        padding: 6px 25px 6px 14px;
+        padding: 6px 20px 6px 14px;
         color: #34495e;
+
+        @include phone-only {
+          padding: 6px 20px 6px 6px;
+        }
       }
 
       .Dropdown-menu {
