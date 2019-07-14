@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import moment from 'moment';
 import Loader from 'react-loader-spinner';
 import ReactMarkdown from 'react-markdown';
+import SubHeader from '../../root/subheader';
 import './news-results.scss';
 
 const NewsResults = ({ fetchNewsData, hits, filters, status }) => {
@@ -11,6 +12,7 @@ const NewsResults = ({ fetchNewsData, hits, filters, status }) => {
 
   return (
     <div className="News-Results row center-lg center-md">
+      <SubHeader />
       <div className="col-xs-12 col-sm-12 col-md-8 col-lg-7">
         {
           status === 'LOADING' ?
