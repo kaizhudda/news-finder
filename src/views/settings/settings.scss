@@ -5,7 +5,7 @@
   font-family: $font-heading;
   margin: 0;
   padding-top: 60px;
-  align-items: center;
+  height: 100vh;
 
   @include phone-only {
     padding-top: 135px;
@@ -19,14 +19,33 @@
 
       .fa-chevron-left {
         align-self: center;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        transition: font-size 0.2s ease;
+
+        &:hover {
+          font-size: 1.35rem;
+        }
+      }
+
+      .heading {
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.25rem;
+        margin: 0;
       }
     }
-    .heading {
-      text-align: left;
-      font-weight: 600;
-      font-size: 1.375rem;
-      margin: 0;
+
+    .setting-night-mode {
+      .settings-title {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+
+      .dark-mode {
+        justify-content: center;
+      }
     }
   }
 }
@@ -38,8 +57,11 @@ body.light-mode {
       color: #34495e;
 
       .header-area {
+        .heading {
+          color: #34495e;
+        }
         .fa-chevron-left {
-          color: #555;
+          color: #34495e;
         }
       }
     }
@@ -48,6 +70,25 @@ body.light-mode {
 
 body.dark-mode {
   .Settings {
+    .content {
+      background: #393c3e;
+      color: #34495e;
 
+      .header-area {
+        .heading {
+          color: #dfdfdf;
+        }
+        .fa-chevron-left {
+          color: #dfdfdf;
+        }
+      }
+
+      
+      .setting-night-mode {
+        .settings-title {
+          color: #dfdfdf;
+        }
+      }
+    }
   }
 }

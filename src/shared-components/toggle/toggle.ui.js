@@ -4,10 +4,10 @@ import useDarkMode from 'use-dark-mode';
 import './toggle.scss';
 
 // Toggle Code from: https://github.com/donavon/use-dark-mode
-const Toggle = () => {
+const Toggle = ({ className }) => {
   const darkMode = useDarkMode(false); 
   return (
-    <div className="dark-mode-toggle">
+    <div className={`dark-mode-toggle ${className || ''}`}>
       <button type="button" onClick={darkMode.disable}>
         ☀
       </button>

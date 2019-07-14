@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DarkModeToggle from '../../shared-components/toggle';
 import { Link } from 'react-router-dom';
 import SearchBar from '../../shared-components/search-bar';
 
@@ -22,7 +21,6 @@ const Header = ({ setQuery }) => {
         <div className="header-content">
           <h1>HN.</h1>
           <SearchBar onChange={onSearchChange} value={searchTerm} />
-          <DarkModeToggle />
           <Link to="/settings"><i class="fas fa-ellipsis-v" /></Link>
         </div>
       </div>
