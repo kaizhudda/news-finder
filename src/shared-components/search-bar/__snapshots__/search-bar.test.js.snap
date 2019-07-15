@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar should render the Search Bar Component 1`] = `
+<form
+  className="search-container"
+>
+  <input
+    id="search-bar"
+    onChange={[MockFunction]}
+    placeholder="Search stories by title"
+    type="text"
+    value="Test Search Value"
+  />
+</form>
+`;
