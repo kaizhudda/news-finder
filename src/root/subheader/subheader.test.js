@@ -8,6 +8,7 @@ const props = {
   setTimeRange: jest.fn()
 };
 let wrapped = mount(<Subheader {...props} />);
+const value =  {value: ['test']};
 
 describe('Subheader', () => {
   it('should render the Subheader Component', () => {
@@ -15,10 +16,19 @@ describe('Subheader', () => {
   });
 
   it('should dispatch onTagsChange action', () => {
-    const value =  {value: ['test']};
     wrapped.find('Dropdown').first().prop('onChange')(value);
     expect(props.setTag).toHaveBeenCalledWith(value.value);
   });
 
+  it('should dispatch setRelevance action', () => {
+    const value =  {value: ['test']};
+    wrapped.find('Dropdown').last().prop('onChange')(value);
+    expect(props.setTag).toHaveBeenCalledWith(value.value);
+  });
 
+  it('should dispatch setTimeRange action', () => {
+    const value =  {value: ['test']};
+    wrapped.find('Dropdown').at(1).prop('onChange')(value);
+    expect(props.setTag).toHaveBeenCalledWith(value.value);
+  });
 });
