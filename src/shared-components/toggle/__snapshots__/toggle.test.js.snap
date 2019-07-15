@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle should render the Search Bar Component 1`] = `
+<div
+  className="dark-mode-toggle"
+>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    ☀
+  </button>
+  <span
+    className="toggle-control"
+  >
+    <input
+      checked={false}
+      className="dmcheck"
+      id="dmcheck"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      htmlFor="dmcheck"
+    />
+  </span>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    ☾
+  </button>
+</div>
+`;

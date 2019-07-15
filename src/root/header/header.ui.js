@@ -9,7 +9,6 @@ const Header = ({ setQuery }) => {
 
   const onSearchChange = (e) => {
     const query = e.target.value;
-    console.log(query);
     // Set Search Term for SearchBar
     setSearchTerm(query);
     setQuery(query);

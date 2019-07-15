@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render the Header Component 1`] = `
+<Header>
+  <div
+    className="Header row"
+  >
+    <div
+      className="col-xs-12 col-lg-8 col-lg-offset-2"
+    >
+      <div
+        className="header-content"
+      >
+        <h1>
+          HN.
+        </h1>
+        <SearchBar
+          onChange={[Function]}
+          value=""
+        >
+          <form
+            className="search-container"
+          >
+            <input
+              id="search-bar"
+              onChange={[Function]}
+              placeholder="Search stories by title"
+              type="text"
+              value=""
+            />
+          </form>
+        </SearchBar>
+        <Toggle>
+          <div
+            className="dark-mode-toggle"
+          >
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              ☀
+            </button>
+            <span
+              className="toggle-control"
+            >
+              <input
+                checked={false}
+                className="dmcheck"
+                id="dmcheck"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <label
+                htmlFor="dmcheck"
+              />
+            </span>
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              ☾
+            </button>
+          </div>
+        </Toggle>
+      </div>
+    </div>
+  </div>
+</Header>
+`;

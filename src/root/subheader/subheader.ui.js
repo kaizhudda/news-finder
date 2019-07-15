@@ -28,17 +28,14 @@ const SubHeader = ({ setTag, setRelevance, setTimeRange }) => {
   const defaultTimeOptions = timeOptions[0];
 
   const onTagsChange = ({ value }) => {
-    console.log('selected dropdown value', value);
     setTag(value);
   };
 
   const onRelevanceChange = ({ value }) => {
-    console.log('relevant option:', value);
     setRelevance(value);
   }
 
   const onTimeRangeChange = ({ value }) => {
-    console.log('onTimeRangeChange option:', value);
     setTimeRange(value);
   }
 

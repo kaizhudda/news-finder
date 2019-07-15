@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Subheader should render the Subheader Component 1`] = `
+<SubHeader
+  setRelevance={[MockFunction]}
+  setTag={[MockFunction]}
+  setTimeRange={[MockFunction]}
+>
+  <div
+    className="SubHeader row"
+  >
+    <div
+      className="col-xs-12 col-lg-8 col-lg-offset-2"
+    >
+      <div
+        className="subheader-content"
+      >
+        <span
+          className="search hide-content"
+        >
+          Search
+        </span>
+        <Dropdown
+          baseClassName="Dropdown"
+          className="tags-dropdown"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "className": "myOptionClassName",
+                "label": "Stories",
+                "value": "story",
+              },
+              Object {
+                "label": "Comments",
+                "value": "comment",
+              },
+            ]
+          }
+          placeholder="Select an option"
+          value={
+            Object {
+              "className": "myOptionClassName",
+              "label": "Stories",
+              "value": "story",
+            }
+          }
+        >
+          <div
+            className="Dropdown-root tags-dropdown"
+          >
+            <div
+              aria-haspopup="listbox"
+              className="Dropdown-control"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="Dropdown-placeholder is-selected"
+              >
+                Stories
+              </div>
+              <div
+                className="Dropdown-arrow-wrapper"
+              >
+                <span
+                  className="Dropdown-arrow"
+                />
+              </div>
+            </div>
+          </div>
+        </Dropdown>
+        <span
+          className="by-relevance hide-content"
+        >
+          by
+        </span>
+        <Dropdown
+          baseClassName="Dropdown"
+          className="tags-dropdown"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "label": "Popularity",
+                "value": "search",
+              },
+              Object {
+                "label": "Date",
+                "value": "search_by_date",
+              },
+            ]
+          }
+          placeholder="Select an option"
+          value={
+            Object {
+              "label": "Popularity",
+              "value": "search",
+            }
+          }
+        >
+          <div
+            className="Dropdown-root tags-dropdown"
+          >
+            <div
+              aria-haspopup="listbox"
+              className="Dropdown-control"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="Dropdown-placeholder is-selected"
+              >
+                Popularity
+              </div>
+              <div
+                className="Dropdown-arrow-wrapper"
+              >
+                <span
+                  className="Dropdown-arrow"
+                />
+              </div>
+            </div>
+          </div>
+        </Dropdown>
+        <span
+          className="by-relevance hide-content"
+        >
+          for
+        </span>
+        <Dropdown
+          baseClassName="Dropdown"
+          className="tags-dropdown"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "label": "All time",
+                "value": "all_time",
+              },
+              Object {
+                "label": "Last 24h",
+                "value": "last_24h",
+              },
+              Object {
+                "label": "Past week",
+                "value": "past_week",
+              },
+              Object {
+                "label": "Past month",
+                "value": "past_month",
+              },
+              Object {
+                "label": "Past year",
+                "value": "past_year",
+              },
+            ]
+          }
+          placeholder="Select an option"
+          value={
+            Object {
+              "label": "All time",
+              "value": "all_time",
+            }
+          }
+        >
+          <div
+            className="Dropdown-root tags-dropdown"
+          >
+            <div
+              aria-haspopup="listbox"
+              className="Dropdown-control"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="Dropdown-placeholder is-selected"
+              >
+                All time
+              </div>
+              <div
+                className="Dropdown-arrow-wrapper"
+              >
+                <span
+                  className="Dropdown-arrow"
+                />
+              </div>
+            </div>
+          </div>
+        </Dropdown>
+      </div>
+    </div>
+  </div>
+</SubHeader>
+`;
