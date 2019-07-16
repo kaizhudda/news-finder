@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render the Header Component 1`] = `
-<Header>
+<Header
+  setQuery={[MockFunction]}
+>
   <div
     className="Header row"
   >

@@ -2,10 +2,20 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Header from './header.ui';
 
-let wrapped = mount(<Header />);
+let props = {
+  setQuery: jest.fn()
+};
+let wrapped = mount(<Header {...props} />);
 
 describe('Header', () => {
   it('should render the Header Component', () => {
     expect(wrapped).toMatchSnapshot();
   });
+
+  // it('should run onSearchChange', () => {
+  //   console.log(wrapped.debug())
+  //   const value = { value: 'test' };
+  //   wrapped.find('SearchBar').prop('onChange')({ target: { value: 'hi' } });
+  //   expect(props.onChange).toHaveBeenCalled();
+  // });
 });
