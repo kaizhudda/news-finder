@@ -9,8 +9,6 @@ export const setQuery = query => dispatch => {
 };
 
 export const setTag = tag => dispatch => {
-  console.log('SET_TAG', tag);
-
   dispatch({
     type: SET_TAG,
     payload: tag === 'all' ? '' : tag
@@ -18,8 +16,6 @@ export const setTag = tag => dispatch => {
 };
 
 export const setRelevance = relevance => dispatch => {
-  console.log('SET_RELEVANCE', relevance);
-
   dispatch({
     type: SET_RELEVANCE,
     payload: relevance
@@ -27,7 +23,6 @@ export const setRelevance = relevance => dispatch => {
 };
 
 export const setTimeRange = time => dispatch => {
-  console.log('SET_TIME_RANGE', time);
   dispatch({
     type: SET_TIME_RANGE,
     payload: convertTimeToUnix(time)

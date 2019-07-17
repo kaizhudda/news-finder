@@ -1,5 +1,4 @@
-import { combineReducers } from 'redux';
-import { FETCH_NEWS_DATA, STATUS } from '../actions/types';
+import { FETCH_NEWS_DATA } from '../actions/types';
 
 const INITAL_STATE = {
   hits: []

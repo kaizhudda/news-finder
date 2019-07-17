@@ -6,7 +6,6 @@ export const fetchNewsData = () => async (dispatch, getState) => {
   dispatch({ type: STATUS, payload: 'LOADING' });
   const state = getState();
   const filters = selectFilters(state);
-  console.log(filters);
   const created_at = filters.createdAt ? `&numericFilters=created_at_i>${filters.createdAt}` : '';
   try {
     const response = await newsSearchAPI.get(`${filters.relevance}?query=${filters.query}&tags=${filters.tags}${created_at}`);
