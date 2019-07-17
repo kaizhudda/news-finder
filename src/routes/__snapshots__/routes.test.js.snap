@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes should render the Routes Component 1`] = `
+<Switch>
+  <Route
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(NewsResults)",
+        "type": [Function],
+      }
+    }
+    exact={true}
+    path="/"
+  />
+</Switch>
+`;
