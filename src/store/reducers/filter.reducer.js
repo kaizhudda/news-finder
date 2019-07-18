@@ -8,7 +8,7 @@ const INITAL_FILTERS = {
   relevance: 'search'
 };
 
-export const filters = (state = INITAL_FILTERS, action) => {
+export const filters = (state = INITAL_FILTERS, action = {}) => {
   switch (action.type) {
     case SET_QUERY:
       return { ...state, query: action.payload };

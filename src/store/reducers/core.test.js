@@ -15,6 +15,12 @@ describe('filter reducer', () => {
       expect(actuaReducer).toEqual(filterState);
     });
 
+    it('should set the reducer state to default state', () => {
+      const actuaReducer = news();
+
+      expect(actuaReducer).toEqual(filterState);
+    });
+
     it('should set the value into news reducer', () => {
       const state = {
         hits: [

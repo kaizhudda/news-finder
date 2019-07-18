@@ -1,6 +1,6 @@
 import { STATUS } from '../actions/types';
 
-export const status = (state = '', action) => {
+export const status = (state = '', action = {}) => {
   switch (action.type) {
     case STATUS:
       return action.payload;
