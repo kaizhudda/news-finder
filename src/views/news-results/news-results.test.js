@@ -44,6 +44,10 @@ describe('NewsResult', () => {
     expect(props.fetchNewsData).toHaveBeenCalled();
   });
 
+  it('should render one news item', () => {
+    expect(wrapped.find('NewsItem').length).toBe(1);
+  });
+
   describe('when status is loading', () => {
 
     afterEach(() => {
@@ -56,14 +60,4 @@ describe('NewsResult', () => {
     });
   });
 
-  describe('when filter tag is comment', () => {
-    it('should render the story title and comment', () => {
-      props.filters.tags = 'comment';
-      props.hits[0].story_title = 'Test Comment Title';
-      props.hits[0].comment_text = 'Test Comment';
-      wrapped = shallow(<NewsResult {...props} />);
-      expect(wrapped.find('.title').text()).toEqual(props.hits[0].story_title);
-      expect(wrapped.find('ReactMarkdown').exists()).toBe(true);
-    });
-  });
 });

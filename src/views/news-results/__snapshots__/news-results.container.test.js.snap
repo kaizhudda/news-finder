@@ -64,44 +64,60 @@ exports[`Summary should render the Summary Container Component correctly 1`] = `
       <div
         className="col-xs-12 col-sm-12 col-md-8 col-lg-7"
       >
-        <div
-          className="hit-item less-side-padding"
+        <NewsItem
+          filters={
+            Object {
+              "tags": "comment",
+            }
+          }
+          hit={
+            Object {
+              "author": "test",
+              "created_at": "2018-03-14T03:50:30.000Z",
+              "title": "steph",
+              "url": "",
+            }
+          }
           key="0"
         >
-          <span
-            className="title"
-          />
           <div
-            className="support-hit"
+            className="hit-item less-side-padding"
           >
-            <span>
-              by 
-              test
-            </span>
-            <span>
-              a year ago
+            <span
+              className="title"
+            />
+            <div
+              className="support-hit"
+            >
+              <span>
+                by 
+                test
+              </span>
+              <span>
+                a year ago
+              </span>
+            </div>
+            <span
+              className="comment"
+            >
+              <ReactMarkdown
+                astPlugins={Array []}
+                escapeHtml={false}
+                parserOptions={Object {}}
+                plugins={Array []}
+                rawSourcePos={false}
+                renderers={Object {}}
+                skipHtml={false}
+                sourcePos={false}
+                transformLinkUri={[Function]}
+              >
+                <Root
+                  key="root-1-1"
+                />
+              </ReactMarkdown>
             </span>
           </div>
-          <span
-            className="comment"
-          >
-            <ReactMarkdown
-              astPlugins={Array []}
-              escapeHtml={false}
-              parserOptions={Object {}}
-              plugins={Array []}
-              rawSourcePos={false}
-              renderers={Object {}}
-              skipHtml={false}
-              sourcePos={false}
-              transformLinkUri={[Function]}
-            >
-              <Root
-                key="root-1-1"
-              />
-            </ReactMarkdown>
-          </span>
-        </div>
+        </NewsItem>
       </div>
     </div>
   </NewsResults>

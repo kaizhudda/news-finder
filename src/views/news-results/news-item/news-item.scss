@@ -1,0 +1,115 @@
+@import '../../../styles/variables';
+@import '../../../styles/media-queries';
+
+.hit-item {
+  font-family: $font-heading;
+  background-color: #fff;
+  padding: 20px 30px 20px 80px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  line-height: 20px;
+
+  .score {
+    font-size: 1rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 80px;
+    text-align: center;
+    margin-top: -10px;
+  }
+  .title {
+    display: flex;
+    margin: 0 0 5px 0;
+    font-family: $font-heading;
+    text-align: left;
+    font-weight: 400;
+    font-size: 0.925rem;
+
+    @include phone-only {
+      font-size: 0.875rem;
+    }
+  }
+
+  .comment {
+    display: flex;
+    margin: 0 0 5px 0;
+    font-family: $font-heading;
+    text-align: left;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #34495e;
+    margin-top: 10px;
+    background: #f2f3f5;
+    padding: 20px 25px;
+    border: 1px solid lightgrey;
+
+    @include phone-only {
+      font-size: 0.825rem;
+    }
+  }
+
+  .support-hit {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+      margin: 0 10px 0 0;
+      font-size: 0.85rem;
+
+      @include phone-only {
+        font-size: 0.625rem;
+      }
+    }
+  }
+}
+
+.less-side-padding {
+  padding: 20px 30px;
+}
+
+body.light-mode {
+  .hit-item {
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+    transition: background-color 0.3s ease;
+
+    .score {
+      color: #f60;
+    }
+
+    .title {
+      color: #34495e;
+    }
+
+    .support-hit {
+      span {
+        color: #828282;
+      }
+    }
+  }
+}
+
+body.dark-mode {
+  .hit-item {
+    background: #393c3e;
+    border-bottom: 1px solid #272727;
+    transition: background-color 0.3s ease;
+    transition: border-bottom 0.3s ease;
+    
+    .score {
+      color: lightblue;
+    }
+
+    .title {
+      color: #dfdfdf;
+    }
+
+    .support-hit {
+      span {
+        color: #dfdfdf;
+      }
+    }
+  }
+}
+
