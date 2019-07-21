@@ -74,11 +74,14 @@ exports[`NewsResult should render the NewsResult Component 1`] = `
           >
             6015
           </span>
-          <span
+          <a
             className="title"
+            href="test"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Test
-          </span>
+          </a>
           <div
             className="support-hit"
           >
