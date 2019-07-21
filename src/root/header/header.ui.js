@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
+import _ from 'lodash';
 import DarkModeToggle from '../../shared-components/toggle';
 import SearchBar from '../../shared-components/search-bar';
 
@@ -6,13 +7,14 @@ import './header.scss';
 
 const Header = ({ setQuery }) => {
   const [searchTerm, setSearchTerm] = useState('');
-
-  const onSearchChange = (e) => {
+  const onSearchChange = e => {
     const query = e.target.value;
     // Set Search Term for SearchBar
     setSearchTerm(query);
-    setQuery(query);
-  }
+    debounceSetQuery(query);
+  };
+
+  const debounceSetQuery = useCallback(_.debounce(setQuery, 2000), []);
 
   return (
     <div className="Header row">
@@ -27,4 +29,4 @@ const Header = ({ setQuery }) => {
   );
 };
 
-export default Header; 
+export default Header;
