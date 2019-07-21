@@ -27,7 +27,7 @@ const NewsItem = ({ hit, filters }) => {
           :
           <>
             <span className="score">{hit.points}</span>
-            <span className="title">{hit.title}</span>
+            <a className="title" href={hit.url} target="_blank" rel="noopener noreferrer">{hit.title}</a>
             <div className="support-hit">
               <span>by {hit.author}</span>
               <span>

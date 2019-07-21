@@ -32,6 +32,10 @@
     }
   }
 
+  a.title {
+    text-decoration: none;
+  }
+
   .comment {
     display: flex;
     margin: 0 0 5px 0;
@@ -80,6 +84,11 @@ body.light-mode {
 
     .title {
       color: #34495e;
+      transition: color ease-in 0.2s;
+      &:hover {
+        color: #f60;
+      }
+    
     }
 
     .support-hit {
@@ -103,6 +112,10 @@ body.dark-mode {
 
     .title {
       color: #dfdfdf;
+      transition: color ease-in 0.2s;
+      &:hover {
+        color: lightblue;
+      }
     }
 
     .support-hit {
