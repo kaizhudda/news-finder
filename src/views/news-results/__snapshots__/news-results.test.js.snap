@@ -1,52 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsResult should render the NewsResult Component 1`] = `
-<NewsResults
-  fetchNewsData={
-    [MockFunction] {
-      "calls": Array [
-        Array [],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  filters={Object {}}
-  hits={
-    Array [
+<BrowserRouter>
+  <Router
+    history={
       Object {
-        "author": "Cogito",
-        "comment_text": null,
-        "created_at": "2018-03-14T03:50:30.000Z",
-        "created_at_i": 1520999430,
-        "num_comments": 436,
-        "parent_id": null,
-        "points": 6015,
-        "relevancy_score": 8012,
-        "story_id": null,
-        "story_text": null,
-        "story_title": null,
-        "story_url": null,
-        "title": "Test",
-        "url": "test",
-      },
-    ]
-  }
-  status=""
->
-  <div
-    className="News-Results row center-lg center-md"
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
   >
-    <div
-      className="col-xs-12 col-sm-12 col-md-8 col-lg-7"
-    >
-      <NewsItem
-        filters={Object {}}
-        hit={
+    <NewsResults
+      fetchNewsData={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
+      filters={Object {}}
+      hits={
+        Array [
           Object {
             "author": "Cogito",
             "comment_text": null,
@@ -62,44 +56,82 @@ exports[`NewsResult should render the NewsResult Component 1`] = `
             "story_url": null,
             "title": "Test",
             "url": "test",
-          }
-        }
-        key="0"
+          },
+        ]
+      }
+      status=""
+    >
+      <div
+        className="News-Results row center-lg center-md"
       >
         <div
-          className="hit-item "
+          className="col-xs-12 col-sm-12 col-md-8 col-lg-7"
         >
-          <span
-            className="score"
+          <NewsItem
+            filters={Object {}}
+            hit={
+              Object {
+                "author": "Cogito",
+                "comment_text": null,
+                "created_at": "2018-03-14T03:50:30.000Z",
+                "created_at_i": 1520999430,
+                "num_comments": 436,
+                "parent_id": null,
+                "points": 6015,
+                "relevancy_score": 8012,
+                "story_id": null,
+                "story_text": null,
+                "story_title": null,
+                "story_url": null,
+                "title": "Test",
+                "url": "test",
+              }
+            }
+            key="0"
           >
-            6015
-          </span>
-          <a
-            className="title"
-            href="test"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Test
-          </a>
-          <div
-            className="support-hit"
-          >
-            <span>
-              by 
-              Cogito
-            </span>
-            <span>
-              a year ago
-            </span>
-            <span>
-              436
-               comments
-            </span>
-          </div>
+            <div
+              className="hit-item "
+            >
+              <span
+                className="score"
+              >
+                6015
+              </span>
+              <a
+                className="title"
+                href="test"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Test
+              </a>
+              <div
+                className="support-hit"
+              >
+                <Link
+                  to="/author/Cogito"
+                >
+                  <a
+                    href="/author/Cogito"
+                    onClick={[Function]}
+                  >
+                    by 
+                    Cogito
+                  </a>
+                </Link>
+                <span>
+                  a year ago
+                </span>
+                <span>
+                  436
+                   comments
+                </span>
+              </div>
+            </div>
+          </NewsItem>
         </div>
-      </NewsItem>
-    </div>
-  </div>
-</NewsResults>
+      </div>
+    </NewsResults>
+  </Router>
+</BrowserRouter>
 `;

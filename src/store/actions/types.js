@@ -8,3 +8,6 @@ export const SET_TIME_RANGE = 'SET_TIME_RANGE';
 
 // status
 export const STATUS = 'STATUS';
+
+// fetch user
+export const FETCH_USER = 'FETCH_USER';

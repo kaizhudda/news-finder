@@ -9,7 +9,7 @@ describe('Routes', () => {
     expect(wrapped).toMatchSnapshot();
   });
 
-  it('should have 1 route', () => {
-    expect(wrapped.find('Route').length).toBe(1);
+  it('should have 2 route', () => {
+    expect(wrapped.find('Route').length).toBe(2);
   });
 });

@@ -57,7 +57,7 @@
   .support-hit {
     display: flex;
     flex-wrap: wrap;
-    span {
+    span, a {
       margin: 0 10px 0 0;
       font-size: 0.85rem;
 
@@ -92,7 +92,7 @@ body.light-mode {
     }
 
     .support-hit {
-      span {
+      span, a {
         color: #828282;
       }
     }
@@ -119,7 +119,7 @@ body.dark-mode {
     }
 
     .support-hit {
-      span {
+      span, a {
         color: #dfdfdf;
       }
     }

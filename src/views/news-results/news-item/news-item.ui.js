@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
 
@@ -29,7 +30,7 @@ const NewsItem = ({ hit, filters }) => {
             <span className="score">{hit.points}</span>
             <a className="title" href={hit.url} target="_blank" rel="noopener noreferrer">{hit.title}</a>
             <div className="support-hit">
-              <span>by {hit.author}</span>
+              <Link to={`/author/${hit.author}`}>by {hit.author}</Link>
               <span>
                 {moment(hit.created_at).fromNow()}
               </span>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { mount, shallow } from 'enzyme';
 import NewsResult from './news-results.ui';
 
@@ -29,7 +30,11 @@ let wrapped;
 
 describe('NewsResult', () => {
   beforeEach(() => {
-    wrapped = mount(<NewsResult {...props} />);
+    wrapped = mount(
+      <Router>
+        <NewsResult {...props} />
+      </Router>
+    );
   });
 
   afterEach(() => {

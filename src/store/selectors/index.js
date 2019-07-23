@@ -3,6 +3,7 @@ import { createSelector } from 'reselect';
 const getNews = (state) => state.news;
 const getFilters = (state) => state.filters;
 const getStatus = (state) => state.status;
+const getUser = (state) => state.user;
 
 export const selectNewsData = createSelector(
   [getNews],
@@ -22,4 +23,9 @@ export const selectFilters = createSelector(
 export const selectStatus = createSelector(
   [getStatus],
   status => status
+);
+
+export const selectUserData = createSelector(
+  [getUser],
+  user => user
 );
