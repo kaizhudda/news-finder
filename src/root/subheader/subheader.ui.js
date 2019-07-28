@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
 import './subheader.scss';
 
 const options = [
-  { value: 'story', label: 'Stories', className: 'myOptionClassName' },
+  { value: 'story', label: 'Stories' },
   { value: 'comment', label: 'Comments' }
 ];
 
