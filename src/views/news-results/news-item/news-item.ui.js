@@ -6,27 +6,27 @@ import ReactMarkdown from 'react-markdown';
 import './news-item.scss';
 
 const NewsItem = ({ hit, filters }) => {
-  const highlightQueryInTitle = (title, higlight) => {
-    if (higlight) {
-      let parts = title.split(new RegExp(`(${higlight})`, 'gi'));
-      console.log(parts);
-      return (
-        <>
-          {
-            parts.map((part, i) =>
-              <span
-                key={i}
-                style={part.toLowerCase() === higlight.toLowerCase() ?
-                  { fontWeight: 'bold', background: 'yellow' } : {}}>
-                &nbsp; {part} &nbsp;
-              </span>
-            )
-          }
-        </>
-      );
-    }
-    return title;
-  }
+  // const highlightQueryInTitle = (title, higlight) => {
+  //   if (higlight) {
+  //     let parts = title.split(new RegExp(`(${higlight})`, 'gi'));
+  //     console.log(parts);
+  //     return (
+  //       <>
+  //         {
+  //           parts.map((part, i) =>
+  //             <span
+  //               key={i}
+  //               style={part.toLowerCase() === higlight.toLowerCase() ?
+  //                 { fontWeight: 'bold', background: 'yellow' } : {}}>
+  //               &nbsp; {part} &nbsp;
+  //             </span>
+  //           )
+  //         }
+  //       </>
+  //     );
+  //   }
+  //   return title;
+  // }
 
 
   return (
@@ -51,7 +51,7 @@ const NewsItem = ({ hit, filters }) => {
           :
           <>
             <span className="score">{hit.points}</span>
-            <a className="title" href={hit.url} target="_blank" rel="noopener noreferrer">{highlightQueryInTitle(hit.title, filters.query)}</a>
+            <a className="title" href={hit.url} target="_blank" rel="noopener noreferrer">{hit.title}</a>
             <div className="support-hit">
               <Link to={`/author/${hit.author}`}>by {hit.author}</Link>
               <span>
