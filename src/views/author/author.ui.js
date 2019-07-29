@@ -7,6 +7,7 @@ import './author.scss';
 
 const Author = ({ fetchUserDetails, match, user, status }) => {
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchUserDetails(match.params.username);
   }, []);
 

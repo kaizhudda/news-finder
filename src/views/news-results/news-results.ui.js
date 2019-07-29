@@ -6,6 +6,7 @@ import './news-results.scss';
 
 const NewsResults = ({ fetchNewsData, hits, filters, status }) => {
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchNewsData();
   }, [fetchNewsData, filters]);
 
