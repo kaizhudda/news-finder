@@ -27,7 +27,6 @@ exports[`Subheader should render the Subheader Component 1`] = `
           options={
             Array [
               Object {
-                "className": "myOptionClassName",
                 "label": "Stories",
                 "value": "story",
               },
@@ -40,7 +39,6 @@ exports[`Subheader should render the Subheader Component 1`] = `
           placeholder="Select an option"
           value={
             Object {
-              "className": "myOptionClassName",
               "label": "Stories",
               "value": "story",
             }

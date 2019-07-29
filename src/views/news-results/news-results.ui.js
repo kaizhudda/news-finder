@@ -14,14 +14,14 @@ const NewsResults = ({ fetchNewsData, hits, filters, status }) => {
       <div className="col-xs-12 col-sm-12 col-md-8 col-lg-7">
         {
           status === 'LOADING' ?
-            <Loader 
+            <Loader
               type="Oval"
               color="#00BFFF"
-              height="50"	
+              height="50"
               width="50"
             /> :
             hits.map((hit, index) => (
-              <NewsItem 
+              <NewsItem
                 key={index}
                 hit={hit}
                 filters={filters} />

@@ -4,8 +4,64 @@
 .Author {
   margin: 60px 0;
   padding-top: 60px;
+  height: 100vh;
 
   @include phone-only {
     padding-top: 135px;
+  }
+
+  .author-box {
+    font-family: $font-heading;
+    background-color: #fff;
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    line-height: 20px;
+    text-align: left;
+
+    .author-user-title {
+      margin: 0 0 16px 0;
+      font-weight: 600;
+    }
+
+    .author-about {
+      margin-bottom: 5px;
+      margin-top: 5px;
+      .about-title {
+        display: inline-block;
+        min-width: 4em;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .loader {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+  }
+}
+
+body.dark-mode {
+  .author-box {
+    background: #393c3e;
+    border-bottom: 1px solid #272727;
+    transition: background-color 0.3s ease;
+    transition: border-bottom 0.3s ease;
+
+    .author-user-title {
+      color: lightblue;
+      transition: color ease-in 0.2s;
+    }
+
+    .about-title {
+      color: #dfdfdf;
+      transition: color ease-in 0.2s;
+    }
+
+    .author-about {
+      color: #dfdfdf;
+      transition: color ease-in 0.2s;
+    }
   }
 }
