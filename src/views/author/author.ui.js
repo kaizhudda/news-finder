@@ -5,11 +5,14 @@ import ReactMarkdown from 'react-markdown';
 
 import './author.scss';
 
-const Author = ({ fetchUserDetails, match, user, status }) => {
+const Author = ({ fetchUserDetails, match, user, status, location: { pathname } }) => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     fetchUserDetails(match.params.username);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const loading = () => (
     <div className="loader">

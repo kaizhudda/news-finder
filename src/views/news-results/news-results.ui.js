@@ -4,11 +4,14 @@ import NewsItem from './news-item';
 
 import './news-results.scss';
 
-const NewsResults = ({ fetchNewsData, hits, filters, status }) => {
+const NewsResults = ({ fetchNewsData, hits, filters, status, location: { pathname } }) => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     fetchNewsData();
   }, [fetchNewsData, filters]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="News-Results row center-lg center-md">
