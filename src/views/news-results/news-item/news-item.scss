@@ -45,19 +45,25 @@
     font-size: 0.875rem;
     color: #34495e;
     margin-top: 10px;
-    background: #f2f3f5;
+    background: #f9f9f9;
     padding: 20px 25px;
-    border: 1px solid lightgrey;
+    line-height: 1.55;
 
     @include phone-only {
       font-size: 0.825rem;
+    }
+
+    p {
+      width: 100%;
+      overflow: auto;
     }
   }
 
   .support-hit {
     display: flex;
     flex-wrap: wrap;
-    span, a {
+    span,
+    a {
       margin: 0 10px 0 0;
       font-size: 0.85rem;
 
@@ -70,6 +76,10 @@
 
 .less-side-padding {
   padding: 20px 30px;
+
+  @include phone-only {
+    padding: 15px;
+  }
 }
 
 body.light-mode {
@@ -88,11 +98,11 @@ body.light-mode {
       &:hover {
         color: #f60;
       }
-    
     }
 
     .support-hit {
-      span, a {
+      span,
+      a {
         color: #828282;
       }
     }
@@ -105,7 +115,7 @@ body.dark-mode {
     border-bottom: 1px solid #272727;
     transition: background-color 0.3s ease;
     transition: border-bottom 0.3s ease;
-    
+
     .score {
       color: lightblue;
     }
@@ -119,10 +129,10 @@ body.dark-mode {
     }
 
     .support-hit {
-      span, a {
+      span,
+      a {
         color: #dfdfdf;
       }
     }
   }
 }
-

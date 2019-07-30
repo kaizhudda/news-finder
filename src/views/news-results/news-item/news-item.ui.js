@@ -42,11 +42,11 @@ const NewsItem = ({ hit, filters }) => {
               </span>
             </div>
             {/* <span className="title">{hit.comment_text}</span> */}
-            <span className="comment">
+            <p className="comment">
               <ReactMarkdown
                 source={hit.comment_text}
                 escapeHtml={false} />
-            </span>
+            </p>
           </>
           :
           <>
