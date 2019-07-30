@@ -1,11 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
+import { withRouter } from 'react-router-dom';
 import DarkModeToggle from '../../shared-components/toggle';
 import SearchBar from '../../shared-components/search-bar';
 
 import './header.scss';
 
-const Header = ({ setQuery }) => {
+const Header = ({ setQuery, location: { pathname } }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const onSearchChange = e => {
     const query = e.target.value;
@@ -21,7 +22,10 @@ const Header = ({ setQuery }) => {
       <div className="col-xs-12 col-lg-8 col-lg-offset-2">
         <div className="header-content">
           <h1>HN.</h1>
-          <SearchBar onChange={onSearchChange} value={searchTerm} />
+          {
+            pathname === '/' &&
+            <SearchBar onChange={onSearchChange} value={searchTerm} />
+          }
           <DarkModeToggle />
         </div>
       </div>
@@ -29,4 +33,4 @@ const Header = ({ setQuery }) => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

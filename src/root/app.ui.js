@@ -1,18 +1,23 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Routes from '../routes';
 import Header from './header';
 import SubHeader from './subheader';
 
 import './app.scss';
 
-const App = () => {
+const App = ({ location: { pathname } }) => {
+  console.log(pathname);
   return (
     <div className="App">
       <Header />
-      <SubHeader />
+      {
+        pathname === '/' &&
+        <SubHeader />
+      }
       <Routes />
     </div>
   );
 }
 
-export default App; 
+export default withRouter(App); 

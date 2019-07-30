@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should render the App Component 1`] = `
-<div
-  className="App"
->
-  <Connect(Header) />
-  <Connect(SubHeader) />
-  <Routes />
-</div>
+<Route>
+  <Component />
+</Route>
 `;
