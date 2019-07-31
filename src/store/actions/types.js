@@ -11,3 +11,6 @@ export const STATUS = 'STATUS';
 
 // fetch user
 export const FETCH_USER = 'FETCH_USER';
+
+// fetch comments for particular story
+export const FETCH_COMMENTS = 'FETCH_COMMENTS';

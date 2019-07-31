@@ -28,7 +28,7 @@ const NewsItem = ({ hit, filters }) => {
   //   return title;
   // }
 
-
+  console.log(filters);
   return (
     <div className={`hit-item ${filters.tags === 'comment' ? 'less-side-padding' : ''}`}>
       {
@@ -57,7 +57,7 @@ const NewsItem = ({ hit, filters }) => {
               <span>
                 {moment(hit.created_at).fromNow()}
               </span>
-              <span>{hit.num_comments} comments</span>
+              <Link to={`/comments/${hit.objectID}`}>{hit.num_comments} comments</Link>
             </div>
           </>
       }

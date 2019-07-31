@@ -4,6 +4,7 @@ const getNews = (state) => state.news;
 const getFilters = (state) => state.filters;
 const getStatus = (state) => state.status;
 const getUser = (state) => state.user;
+const getComments = (state) => state.comments;
 
 export const selectNewsData = createSelector(
   [getNews],
@@ -28,4 +29,9 @@ export const selectStatus = createSelector(
 export const selectUserData = createSelector(
   [getUser],
   user => user
+);
+
+export const selectCommentsThread = createSelector(
+  [getComments],
+  comments => comments.hits
 );
