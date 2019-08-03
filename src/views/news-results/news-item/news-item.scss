@@ -26,7 +26,7 @@
     font-family: $font-heading;
     text-align: left;
     font-weight: 400;
-    font-size: 0.925rem;
+    font-size: 1rem;
     color: #34495e;
     transition: color 0.2s;
 
@@ -85,6 +85,10 @@
 
 .less-side-padding {
   padding: 20px 30px;
+
+  @include phone-only {
+    padding: 15px 15px;
+  }
 }
 
 body.light-mode {
@@ -110,6 +114,11 @@ body.dark-mode {
       &:hover {
         color: lightblue;
       }
+    }
+
+    .comment {
+      color: #dfdfdf;
+      background: #272727;
     }
 
     .support-hit {

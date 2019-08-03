@@ -7,6 +7,7 @@
   height: 100vh;
 
   @include phone-only {
+    padding-top: 45px;
   }
 
   .comments-box {
@@ -23,6 +24,10 @@
       font-weight: 600;
       color: #ff742b;
       font-size: 20px;
+
+      @include phone-only {
+        font-size: 1.125rem;
+      }
     }
 
     a.comments-author {
@@ -39,10 +44,18 @@
 }
 
 body.dark-mode {
-  .author-box {
+  .comments-box {
     background: #393c3e;
     border-bottom: 1px solid #272727;
     transition: background-color 0.3s ease;
     transition: border-bottom 0.3s ease;
+
+    .comments-user-title {
+      color: lightblue;
+    }
+
+    a.comments-author {
+      color: #dfdfdf;
+    }
   }
 }

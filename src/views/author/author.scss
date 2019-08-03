@@ -7,7 +7,7 @@
   height: 100vh;
 
   @include phone-only {
-    padding-top: 10px;
+    padding-top: 45px;
   }
 
   .author-box {
@@ -23,6 +23,10 @@
       margin: 0 0 16px 0;
       font-weight: 600;
       color: #ff742b;
+
+      @include phone-only {
+        font-size: 1.125rem;
+      }
     }
 
     .author-about {
