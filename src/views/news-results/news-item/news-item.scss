@@ -18,6 +18,7 @@
     width: 80px;
     text-align: center;
     margin-top: -10px;
+    color: #f60;
   }
   .title {
     display: flex;
@@ -26,6 +27,12 @@
     text-align: left;
     font-weight: 400;
     font-size: 0.925rem;
+    color: #34495e;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #f60;
+    }
 
     @include phone-only {
       font-size: 0.875rem;
@@ -67,6 +74,7 @@
     a {
       margin: 0 10px 0 0;
       font-size: 0.85rem;
+      color: #828282;
 
       @include phone-only {
         font-size: 0.625rem;
@@ -81,28 +89,7 @@
 
 body.light-mode {
   .hit-item {
-    background: white;
-    border-bottom: 1px solid #eeeeee;
     transition: background-color 0.3s ease;
-
-    .score {
-      color: #f60;
-    }
-
-    .title {
-      color: #34495e;
-      transition: color ease-in 0.2s;
-      &:hover {
-        color: #f60;
-      }
-    }
-
-    .support-hit {
-      span,
-      a {
-        color: #828282;
-      }
-    }
   }
 }
 

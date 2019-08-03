@@ -21,12 +21,14 @@ const Header = ({ setQuery, location: { pathname } }) => {
     <div className="Header row">
       <div className="col-xs-12 col-lg-8 col-lg-offset-2">
         <div className="header-content">
-          <h1>HN.</h1>
+          <h1 className="app-title">HN.</h1>
           {
             pathname === '/' &&
             <SearchBar onChange={onSearchChange} value={searchTerm} />
           }
-          <DarkModeToggle />
+          <div className="hide-on-mobile">
+            <DarkModeToggle />
+          </div>
         </div>
       </div>
     </div>

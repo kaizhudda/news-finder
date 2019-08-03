@@ -9,25 +9,37 @@
   left: 0;
   right: 0;
   min-height: 50px;
+  background: #ff742b;
+  display: flex;
+  align-items: center;
 
   .header-content {
     display: flex;
     flex-direction: row;
-    // height: 60px;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
-    // justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
+    color: white;
+    justify-content: space-between;
 
     @include phone-only {
-      flex-direction: column;
+      flex-direction: row;
+      .hide-on-mobile {
+        display: none;
+      }
     }
 
-    // :last-child {
-    //   margin-left: auto;
-    // }
+    .app-title {
+      width: 110px;
+      text-align: center;
+
+      @include phone-only {
+        width: unset;
+        margin-right: 10px;
+      }
+    }
 
     h1 {
       margin-bottom: 0px;
@@ -35,29 +47,19 @@
       font-family: $font-heading;
       font-size: 1.25rem;
       font-weight: 600;
-      flex-grow: 1;
       text-align: left;
       letter-spacing: 0.075rem;
 
       @include phone-only {
         font-size: 1rem;
-        margin-bottom: 10px;
-        flex-grow: 1;
       }
-    }
-
-    .dark-mode-toggle {
-      flex-grow: 1;
     }
   }
 }
 
 body.light-mode {
   .Header {
-    background: #ff742b;
-
     .header-content {
-      color: white;
       transition: background-color 0.3s ease;
     }
   }

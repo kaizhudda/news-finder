@@ -1,89 +1,62 @@
 @import '../../styles//variables';
 @import '../../styles/media-queries';
 
-.search-container{
-  flex-grow: 2;
+.search-container {
   position: relative;
   display: flex;
   justify-content: center;
 
-  @include phone-only {
-    flex-grow: 1;
+  .fa-search {
+    color: white;
+    align-self: center;
   }
 
-  .fa-search {
-    position: absolute;
-    right: 125px;
-    top: 10px;
-    color: #ff742b;
-  
-  
-    // @include desktop-only {
-    //   right: 30px;
-    // }
-    // @include tablet-only {
-    //   right: 55px;
-    // }
+  i.fa-search {
+    padding: 12px 15px;
+    background: #5bc3eb;
   }
 }
 
-input#search-bar{
-  width: 375px;
-  padding: 10px 20px;
+input#search-bar {
+  width: 275px;
+  padding: 10px 25px;
   font-size: 1rem;
-  border: 1px solid #D0CFCE;
-  border-radius: 22.5px;
+  border: 1px solid #d0cfce;
   outline: none;
-  &:focus{
+  &:focus {
     border: 1px solid transparent;
     transition: 0.35s ease;
     color: #333333;
-    &::-webkit-input-placeholder{
-      transition: opacity 0.45s ease; 
-  	  opacity: 0;
-     }
+    &::-webkit-input-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
     &::-moz-placeholder {
-      transition: opacity 0.45s ease; 
-  	  opacity: 0;
-     }
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
     &:-ms-placeholder {
-     transition: opacity 0.45s ease; 
-  	 opacity: 0;
-     }    
-   }
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+  }
 
-   @include phone-only {
-     width: 100%;
-   }
+  @include phone-only {
+    font-size: 0.875rem;
+    padding: 10px 20px;
+    width: 100%;
+  }
 
-   @include phablet-only {
+  @include phablet-only {
     width: 200px;
   }
 
-   @include tablet-only {
-     width: 300px;
-   }
-
-   @include desktop-only {
-     width: 350px;
-   }
- }
-
-// .search-icon{
-//   position: relative;
-//   width: 60px;
-//   height: 60px;
-//   top: -30px;
-//   left: 150px;
-// }
-
-body.light-mode {
-  .fa-search {
-    color: #ff742b;
+  @include tablet-only {
+    width: 300px;
   }
 
-  input#search-bar {
-    border: 1px solid #D0CFCE;
+  @include desktop-only {
+    width: 350px;
   }
 }
 
@@ -101,5 +74,4 @@ body.dark-mode {
       color: #dfdfdf;
     }
   }
-
 }

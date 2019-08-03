@@ -6,13 +6,13 @@ const SearchBar = ({ onChange, value }) => {
 
   return (
     <form className="search-container">
-      <input 
+      <input
         value={value}
         onChange={onChange}
-        type="text" 
-        id="search-bar" 
+        type="text"
+        id="search-bar"
         placeholder="Search stories by title" />
-      {/* <i class="fas fa-search" /> */}
+      <i class="fas fa-search"></i>
     </form>
   )
 };
