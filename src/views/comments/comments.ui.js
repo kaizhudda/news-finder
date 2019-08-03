@@ -4,7 +4,8 @@ import NewsItem from './comments-item';
 
 import './comments.scss';
 
-const Comments = ({ fetchComments, match, comments, status, location: { pathname } }) => {
+const Comments = ({ fetchComments, match, comments, status, location: { pathname, state } }) => {
+  console.log(state);
   useEffect(() => {
     fetchComments(match.params.storyId);
   }, []);
@@ -31,12 +32,21 @@ const Comments = ({ fetchComments, match, comments, status, location: { pathname
   );
 
   const success = () => (
-    <div className="author-box">
+    <div className="comments-box">
       {
         comments &&
-        comments.map((comment) => (
-          <NewsItem key={comment.objectID} hit={comment} />
-        ))
+          comments.length > 1 ?
+          <>
+            <div> {state.storyTitle} </div>
+            <div> by {state.authorName} </div>
+            {
+              comments.map((comment) => (
+                <NewsItem key={comment.objectID} hit={comment} />
+              ))
+            }
+          </>
+          :
+          <div className="no-comments"> There are no comments for this article </div>
       }
     </div>
   );

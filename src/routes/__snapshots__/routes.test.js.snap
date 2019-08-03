@@ -28,6 +28,19 @@ exports[`Routes should render the Routes Component 1`] = `
     exact={true}
     path="/author/:username"
   />
+  <Route
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(Comments)",
+        "type": [Function],
+      }
+    }
+    exact={true}
+    path="/comments/:storyId"
+  />
   <Redirect
     to="/"
   />

@@ -36,12 +36,11 @@ const NewsItem = ({ hit, filters }) => {
           <>
             <span className="title">{hit.story_title}</span>
             <div className="support-hit">
-              <span>by {hit.author}</span>
+              <Link to={`/author/${hit.author}`}>by {hit.author}</Link>
               <span>
                 {moment(hit.created_at).fromNow()}
               </span>
             </div>
-            {/* <span className="title">{hit.comment_text}</span> */}
             <p className="comment">
               <ReactMarkdown
                 source={hit.comment_text}
@@ -57,7 +56,9 @@ const NewsItem = ({ hit, filters }) => {
               <span>
                 {moment(hit.created_at).fromNow()}
               </span>
-              <Link to={`/comments/${hit.objectID}`}>{hit.num_comments} comments</Link>
+              <Link to={{ pathname: `/comments/${hit.objectID}`, state: { storyTitle: hit.title, authorName: hit.author } }}>
+                {hit.num_comments} comments
+              </Link>
             </div>
           </>
       }
