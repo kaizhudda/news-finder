@@ -62,7 +62,12 @@ input#search-bar {
 
 body.dark-mode {
   .fa-search {
-    color: #999;
+    color: lightblue;
+  }
+
+  i.fa-search {
+    padding: 12px 15px;
+    background: #555;
   }
 
   input#search-bar {
