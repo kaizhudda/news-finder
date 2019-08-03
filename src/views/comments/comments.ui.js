@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import NewsItem from './comments-item';
 
@@ -27,7 +28,7 @@ const Comments = ({ fetchComments, match, comments, status, location: { pathname
 
   const error = () => (
     <div>
-      Error
+      Error, please try again later.
     </div>
   );
 
@@ -35,18 +36,20 @@ const Comments = ({ fetchComments, match, comments, status, location: { pathname
     <div className="comments-box">
       {
         comments &&
-          comments.length > 1 ?
+          comments.length > 1 && state ?
           <>
-            <div> {state.storyTitle} </div>
-            <div> by {state.authorName} </div>
+            <div className="comments-user-title"> {state.storyTitle} </div>
+            <Link className="comments-author" to={`/author/${state.authorName}`}>by {state.authorName}</Link>
             {
               comments.map((comment) => (
                 <NewsItem key={comment.objectID} hit={comment} />
               ))
             }
           </>
-          :
-          <div className="no-comments"> There are no comments for this article </div>
+          : !state ?
+            error()
+            :
+            <div className="no-comments"> There are no comments for this article </div>
       }
     </div>
   );

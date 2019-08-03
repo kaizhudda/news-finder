@@ -18,6 +18,18 @@
     position: relative;
     line-height: 20px;
     text-align: left;
+
+    .comments-user-title {
+      margin: 0 0 8px 0;
+      font-weight: 600;
+      color: #ff742b;
+      font-size: 20px;
+    }
+
+    a.comments-author {
+      margin: 0;
+      font-size: 15px;
+    }
   }
 
   .loader {
