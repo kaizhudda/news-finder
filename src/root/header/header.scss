@@ -33,15 +33,7 @@
 
     .app-title {
       width: 110px;
-      text-align: center;
-
-      @include phone-only {
-        width: unset;
-        margin-right: 10px;
-      }
-    }
-
-    h1 {
+      text-align: center !important;
       margin-bottom: 0px;
       margin-top: 0px;
       font-family: $font-heading;
@@ -49,8 +41,16 @@
       font-weight: 600;
       text-align: left;
       letter-spacing: 0.075rem;
+      text-decoration: none;
+      color: white;
+
+      &:active {
+        color: inherit;
+      }
 
       @include phone-only {
+        width: unset;
+        margin-right: 10px;
         font-size: 1rem;
       }
     }
