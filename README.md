@@ -2,55 +2,65 @@
 
 # News Finder
 
-![Thumbnail](news-finder-thumbnail.png)
+HackerNews clone built with react.js + react router + redux.
 
-## Overview
-Hacker News clone built with:
-* React.js 
-* Redux
-* Redux Thunk
-* Reselect (Selectors)
-* HTML5 
-* SCSS 
-* Jest/Enzyme
-* Netlify (CI/CD pipelines)
+<p align="center">
+  <a href="https://newstoday.kaizhudda.com" target="_blank">
+    <img src="https://raw.githubusercontent.com/kaizhudda/news-finder/master/news-finder-thumbnail.png" width="700px">
+    <br>
+    Live Demo
+  </a>
+</p>
 
+## Built with
 
-[Live Demo](https://newstoday.netlify.com)
+- React.js
+- Redux
+- React Router
+- Redux Thunk
+- Reselect (Selectors)
+- HTML5
+- SCSS
+- Jest/Enzyme
+- Netlify (CI/CD pipelines)
 
 ## Features
-* Search for any news via the search box
-* Search for Stories or Comments
-* Search by Popularity or Date
-* Search for News only in the last 24 hours, 1 week, 1 month or 1 year
-* View more information about a author
-* Dark mode toggle for ease of use during night time
+
+- Search for any news via the search box
+- Search for Stories or Comments
+- Search by Popularity or Date
+- Search for News only in the last 24 hours, 1 week, 1 month or 1 year
+- View more information about a author
+- View comments for a particular post
+- View multiple pages of stories
+- Dark mode toggle for ease of use during night time
 
 ## Install dependencies
 
-``` bash
+```bash
 yarn # or npm install
 ```
 
 ## Run
 
-``` bash
+```bash
 yarn start # or npm start
 ```
 
-View the App on ```localhost:3000```
+View the app on `localhost:3000`
 
 ## Build
 
-``` bash
+```bash
 yarn build # or npm run build
 ```
 
 ## Test
 
-``` bash
+```bash
 yarn test # npm run test-coverage
 ```
 
 ## License
+
 MIT
