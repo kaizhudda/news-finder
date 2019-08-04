@@ -2,6 +2,8 @@
 
 # News Finder
 
+![Thumbnail](news-finder-thumbnail)
+
 ## Overview
 Hacker News clone built with:
 * React.js 
