@@ -1,4 +1,5 @@
-import { SET_QUERY, SET_TAG, SET_RELEVANCE, SET_TIME_RANGE } from './types';
+import { SET_QUERY, SET_TAG, SET_RELEVANCE, SET_TIME_RANGE, SET_PAGE } from './types';
+import { selectPageNumber } from '../selectors/index';
 import moment from 'moment';
 
 export const setQuery = query => dispatch => {
@@ -42,4 +43,20 @@ const convertTimeToUnix = time => {
     default:
       return time = null;
   }
+};
+
+export const setPageUp = () => (dispatch, getState) => {
+  const state = getState();
+  dispatch({
+    type: SET_PAGE,
+    payload: selectPageNumber(state).page + 1
+  });
+};
+
+export const setPageDown = () => (dispatch, getState) => {
+  const state = getState();
+  dispatch({
+    type: SET_PAGE,
+    payload: parseInt(selectPageNumber(state).page) - 1
+  });
 };

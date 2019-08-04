@@ -1,8 +1,8 @@
-import { SET_QUERY, SET_TAG, SET_RELEVANCE, SET_TIME_RANGE } from '../actions/types';
+import { SET_QUERY, SET_TAG, SET_RELEVANCE, SET_TIME_RANGE, SET_PAGE } from '../actions/types';
 
 const INITAL_FILTERS = {
   query: '',
-  page: '',
+  page: 0,
   tags: 'story',
   createdAt: '',
   relevance: 'search'
@@ -18,6 +18,8 @@ export const filters = (state = INITAL_FILTERS, action = {}) => {
       return { ...state, relevance: action.payload };
     case SET_TIME_RANGE:
       return { ...state, createdAt: action.payload };
+    case SET_PAGE:
+      return { ...state, page: action.payload };
     default:
       return state;
   }

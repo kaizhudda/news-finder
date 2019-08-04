@@ -8,7 +8,7 @@ export const news = (state = INITAL_STATE, action = {}) => {
   switch (action.type) {
     case FETCH_NEWS_DATA:
       return action.payload;
-    default: 
+    default:
       return state;
   }
 };

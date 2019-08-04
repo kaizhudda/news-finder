@@ -6,9 +6,11 @@ const getStatus = (state) => state.status;
 const getUser = (state) => state.user;
 const getComments = (state) => state.comments;
 
-export const selectNewsData = createSelector(
+export const selectPageNumber = createSelector(
   [getNews],
-  news => news.nbPages
+  news => {
+    return { page: news.page, nbPages: news.nbPages };
+  }
 );
 
 export const selectHits = createSelector(
