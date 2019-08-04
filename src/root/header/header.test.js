@@ -11,11 +11,4 @@ describe('Header', () => {
   it('should render the Header Component', () => {
     expect(wrapped).toMatchSnapshot();
   });
-
-  // it('should run onSearchChange', () => {
-  //   console.log(wrapped.debug())
-  //   const value = { value: 'test' };
-  //   wrapped.find('SearchBar').prop('onChange')({ target: { value: 'hi' } });
-  //   expect(props.onChange).toHaveBeenCalled();
-  // });
 });

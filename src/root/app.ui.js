@@ -7,7 +7,6 @@ import SubHeader from './subheader';
 import './app.scss';
 
 const App = ({ location: { pathname } }) => {
-  console.log(pathname);
   return (
     <div className="App">
       <Header />

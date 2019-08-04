@@ -6,7 +6,6 @@ import NewsItem from './comments-item';
 import './comments.scss';
 
 const Comments = ({ fetchComments, match, comments, status, location: { pathname, state } }) => {
-  console.log(state);
   useEffect(() => {
     fetchComments(match.params.storyId);
   }, []);
@@ -53,8 +52,6 @@ const Comments = ({ fetchComments, match, comments, status, location: { pathname
       }
     </div>
   );
-
-  console.log('comments', comments);
 
   return (
     <div className={`Comments row center-lg center-md`}>

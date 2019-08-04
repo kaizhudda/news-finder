@@ -6,29 +6,6 @@ import ReactMarkdown from 'react-markdown';
 import './news-item.scss';
 
 const NewsItem = ({ hit, filters }) => {
-  // const highlightQueryInTitle = (title, higlight) => {
-  //   if (higlight) {
-  //     let parts = title.split(new RegExp(`(${higlight})`, 'gi'));
-  //     console.log(parts);
-  //     return (
-  //       <>
-  //         {
-  //           parts.map((part, i) =>
-  //             <span
-  //               key={i}
-  //               style={part.toLowerCase() === higlight.toLowerCase() ?
-  //                 { fontWeight: 'bold', background: 'yellow' } : {}}>
-  //               &nbsp; {part} &nbsp;
-  //             </span>
-  //           )
-  //         }
-  //       </>
-  //     );
-  //   }
-  //   return title;
-  // }
-
-  console.log(filters);
   return (
     <div className={`hit-item ${filters.tags === 'comment' ? 'less-side-padding' : ''}`}>
       {
