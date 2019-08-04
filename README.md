@@ -6,7 +6,7 @@ HackerNews clone built with react.js + react router + redux.
 
 <p align="center">
   <a href="https://newstoday.kaizhudda.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/kaizhudda/news-finder/master/news-finder-thumbnail.png" width="700px">
+    <img src="https://raw.githubusercontent.com/kaizhudda/news-finder/master/thumbnail.png" width="700px">
     <br>
     Live Demo
   </a>
