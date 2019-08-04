@@ -2,7 +2,7 @@
 
 # News Finder
 
-![Thumbnail](news-finder-thumbnail)
+![Thumbnail](news-finder-thumbnail.png)
 
 ## Overview
 Hacker News clone built with:
